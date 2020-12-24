@@ -27,11 +27,11 @@ def predict():
     try:
         
         json_ = request.get_json()
-        query = pd.get_dummies(pd.DataFrame(json_))
-        query = query.reindex(columns=model_columns, fill_value=0)
-        prediction = list(lr.predict(query))
-
-        return jsonify({'prediction': str(prediction)})
+        #query = pd.get_dummies(pd.DataFrame(json_))
+        #query = query.reindex(columns=model_columns, fill_value=0)
+        #prediction = list(lr.predict(query))
+        pred= ['ABC', 'DEF', 'GHI']
+        return jsonify(pred)
 
     except:
         
